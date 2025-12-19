@@ -1,0 +1,355 @@
+gcc -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/x86_64-linux-gnu -I/usr/include/webp -I/usr/include/atk-1.0 -pthread  -rdynamic -o integrated_app src/callbacks.c src/dashboard.c src/emna_callbacks.c src/entrain.c src/glade_shims.c src/interface.c src/isra_callbacks.c src/main.c src/Member.c src/memberstats.c src/stats_graphics.c src/support.c src/ui_registry.c -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lharfbuzz -lfontconfig -lfreetype 
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/callbacks.c:9:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/dashboard.c:5:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/glade_shims.c:7:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+src/glade_shims.c: In function ‘on_buttonStatsExportPDF_clicked’:
+src/glade_shims.c:274:32: warning: implicit declaration of function ‘cairo_pdf_surface_create’; did you mean ‘cairo_image_surface_create’? [-Wimplicit-function-declaration]
+  274 |     cairo_surface_t *surface = cairo_pdf_surface_create(pdf_filename, 595, 842);
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~
+      |                                cairo_image_surface_create
+src/glade_shims.c:274:32: warning: initialization of ‘cairo_surface_t *’ {aka ‘struct _cairo_surface *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/interface.c:16:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/isra_callbacks.c:1:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+src/isra_callbacks.c: In function ‘on_treeview_members_row_activated’:
+src/isra_callbacks.c:612:26: error: conflicting types for ‘supprimer_member’; have ‘void(char *, char *)’
+  612 |              extern void supprimer_member(char * filename, char * id);
+      |                          ^~~~~~~~~~~~~~~~
+In file included from src/isra_callbacks.c:5:
+src/Member.h:21:5: note: previous declaration of ‘supprimer_member’ with type ‘int(char *, char *)’
+   21 | int supprimer_member(char *filename, char *id);
+      |     ^~~~~~~~~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/main.c:5:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+src/main.c: In function ‘main’:
+src/main.c:56:13: warning: implicit declaration of function ‘dashboard_init_dynamic’ [-Wimplicit-function-declaration]
+   56 |             dashboard_init_dynamic();
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/stats_graphics.h:10,
+                 from src/stats_graphics.c:7:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/support.c:9:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+In file included from /usr/include/gtk-2.0/gtk/gtkobject.h:37,
+                 from /usr/include/gtk-2.0/gtk/gtkwidget.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkcontainer.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkbin.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkwindow.h:36,
+                 from /usr/include/gtk-2.0/gtk/gtkdialog.h:35,
+                 from /usr/include/gtk-2.0/gtk/gtkaboutdialog.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:33,
+                 from src/ui_registry.h:4,
+                 from src/ui_registry.c:1:
+/usr/include/gtk-2.0/gtk/gtktypeutils.h:236:1: warning: ‘GTypeDebugFlags’ is deprecated [-Wdeprecated-declarations]
+  236 | void            gtk_type_init   (GTypeDebugFlags    debug_flags);
+      | ^~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /usr/include/glib-2.0/gio/gioenums.h:30,
+                 from /usr/include/glib-2.0/gio/giotypes.h:30,
+                 from /usr/include/glib-2.0/gio/gio.h:28,
+                 from /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h:30,
+                 from /usr/include/gtk-2.0/gdk/gdk.h:32,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:32:
+/usr/include/glib-2.0/gobject/gtype.h:725:1: note: declared here
+  725 | {
+      | ^
+In file included from /usr/include/gtk-2.0/gtk/gtktoolitem.h:31,
+                 from /usr/include/gtk-2.0/gtk/gtktoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtkmenutoolbutton.h:30,
+                 from /usr/include/gtk-2.0/gtk/gtk.h:126:
+/usr/include/gtk-2.0/gtk/gtktooltips.h:73:3: warning: ‘GTimeVal’ is deprecated: Use 'GDateTime' instead [-Wdeprecated-declarations]
+   73 |   GTimeVal last_popdown;
+      |   ^~~~~~~~
+In file included from /usr/include/glib-2.0/glib/galloca.h:34,
+                 from /usr/include/glib-2.0/glib.h:32,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:30:
+/usr/include/glib-2.0/glib/gtypes.h:580:8: note: declared here
+  580 | struct _GTimeVal
+      |        ^~~~~~~~~
+make: *** [Makefile:13: integrated_app] Error 1

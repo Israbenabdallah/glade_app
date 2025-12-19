@@ -1,0 +1,189 @@
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:20:35
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 1
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 5
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:20:52
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 1
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 5
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:21:22
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 1
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 12
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:22:15
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 1
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 12
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:33:11
+Classes Attended: Selected coach: Coach Alex
+Favorite Class: 1
+Coach Name: Coach Alex
+Performance Rating: Good
+Consistency Score: 12
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:37:37
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 2
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 12
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:38:02
+Classes Attended: Selected coach: Coach Alex
+Favorite Class: 80
+Coach Name: Coach Alex
+Performance Rating: Excellent
+Consistency Score: 50
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:45:55
+Classes Attended: Selected coach: Coach Alex
+Favorite Class: 25
+Coach Name: Coach Alex
+Performance Rating: Excellent
+Consistency Score: 50
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:46:41
+Classes Attended: Selected coach: Coach Alex
+Favorite Class: 50
+Coach Name: Coach Alex
+Performance Rating: Excellent
+Consistency Score: 8
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:50:46
+Classes Attended: Selected coach: Coach Alex
+Favorite Class: 20
+Coach Name: Coach Alex
+Performance Rating: Good
+Consistency Score: 45
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:51:28
+Classes Attended: Selected coach: Coach Alex
+Favorite Class: 20
+Coach Name: Coach Alex
+Performance Rating: Excellent
+Consistency Score: 52
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:53:43
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 25
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 89
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 20:54:19
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 58
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 89
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 21:12:21
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 52
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 58
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 21:14:27
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 58
+Coach Name: Coach Sarah
+Performance Rating: Excellent
+Consistency Score: 88
+================================
+
+=== Member Statistics Saved ===
+Date: 17/12/2025 21:20:49
+Classes Attended: Selected coach: Coach Sarah
+Favorite Class: 25
+Coach Name: Coach Sarah
+Performance Rating: Good
+Consistency Score: 20
+================================
+
+=== Member Statistics Saved ===
+Date: 18/12/2025 00:17:49
+Classes Attended: Selected coach: me me
+Favorite Class: 20
+Coach Name: me me
+Performance Rating: Good
+Consistency Score: 58
+================================
+
+=== Member Statistics Saved ===
+Date: 18/12/2025 18:42:54
+Classes Attended: Selected coach: anas anas
+Favorite Class: 25
+Coach Name: anas anas
+Performance Rating: Good
+Consistency Score: 58
+================================
+
+=== Member Statistics Saved ===
+Date: 18/12/2025 22:09:26
+Classes Attended: Selected coach: me me
+Favorite Class: 52
+Coach Name: me me
+Performance Rating: Good
+Consistency Score: 20
+================================
+
+=== Member Statistics Saved ===
+Date: 19/12/2025 20:27:21
+Classes Attended: Selected coach: anas anas
+Favorite Class: 
+Coach Name: anas anas
+Performance Rating: Bad
+Consistency Score: 
+================================
+
+=== Member Statistics Saved ===
+Date: 19/12/2025 21:22:51
+Classes Attended: Selected coach: mhamdi emna
+Favorite Class: 3
+Coach Name: mhamdi emna
+Performance Rating: Good
+Consistency Score: 12
+================================
+

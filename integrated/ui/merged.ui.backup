@@ -1,0 +1,1648 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+	<!-- ListStore for Coach Speciality ComboBox -->
+	<object class="GtkListStore" id="liststore_speciality">
+		<columns>
+			<column type="gchararray"/>
+		</columns>
+		<data>
+			<row>
+				<col id="0">Fitness</col>
+			</row>
+			<row>
+				<col id="0">Crossfit</col>
+			</row>
+			<row>
+				<col id="0">Yoga</col>
+			</row>
+		</data>
+	</object>
+
+	<!-- Adjustment for Age SpinButton -->
+	<object class="GtkAdjustment" id="adjustment_age">
+		<property name="lower">0</property>
+		<property name="upper">100</property>
+		<property name="value">18</property>
+		<property name="step_increment">1</property>
+		<property name="page_increment">10</property>
+	</object>
+
+	<!-- Dashboard: Professional Navigation Window -->
+	<object class="GtkWindow" id="window_dashboard">
+		<property name="visible">False</property>
+		<property name="title" translatable="yes">🏋️ Gym Management System - Dashboard</property>
+		<property name="type">GTK_WINDOW_TOPLEVEL</property>
+		<property name="window_position">GTK_WIN_POS_CENTER</property>
+		<property name="default_width">1200</property>
+		<property name="default_height">800</property>
+		<property name="resizable">True</property>
+		<signal name="destroy" handler="gtk_main_quit" />
+
+		<child>
+			<object class="GtkVBox" id="vbox_dashboard_main">
+				<property name="visible">True</property>
+				<property name="spacing">0</property>
+
+				<!-- Header Section -->
+				<child>
+					<object class="GtkEventBox" id="dashboard_header_box">
+						<property name="visible">True</property>
+						<child>
+							<object class="GtkVBox" id="vbox_header_content">
+								<property name="visible">True</property>
+								<property name="spacing">5</property>
+								<property name="border_width">20</property>
+
+								<child>
+									<object class="GtkLabel" id="dashboard_header_title">
+										<property name="visible">True</property>
+										<property name="label" translatable="yes">&lt;span size='xx-large' weight='bold'&gt;🏋️ GYM MANAGEMENT SYSTEM&lt;/span&gt;</property>
+										<property name="use_markup">True</property>
+										<property name="xalign">0.5</property>
+									</object>
+									<packing>
+										<property name="expand">False</property>
+									</packing>
+								</child>
+
+								<child>
+									<object class="GtkLabel" id="dashboard_subtitle">
+										<property name="visible">True</property>
+										<property name="label" translatable="yes">&lt;span size='large'&gt;Professional Management Dashboard&lt;/span&gt;</property>
+										<property name="use_markup">True</property>
+										<property name="xalign">0.5</property>
+									</object>
+									<packing>
+										<property name="expand">False</property>
+									</packing>
+								</child>
+							</object>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="fill">True</property>
+					</packing>
+				</child>
+
+				<!-- Main Dashboard Content -->
+				<child>
+					<object class="GtkVBox" id="vbox_dashboard_content">
+						<property name="visible">True</property>
+						<property name="spacing">20</property>
+						<property name="border_width">30</property>
+
+						<!-- Member Management Section -->
+						<child>
+							<object class="GtkFrame" id="frame_member_section">
+								<property name="visible">True</property>
+								<property name="label_xalign">0.5</property>
+								<property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+								<child type="label">
+									<object class="GtkLabel" id="label_frame_members">
+										<property name="visible">True</property>
+										<property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;👥 MEMBER MANAGEMENT&lt;/span&gt;</property>
+										<property name="use_markup">True</property>
+									</object>
+								</child>
+								<child>
+									<object class="GtkHBox" id="hbox_member_buttons">
+										<property name="visible">True</property>
+										<property name="spacing">20</property>
+										<property name="border_width">20</property>
+										<property name="homogeneous">True</property>
+
+										<child>
+											<object class="GtkButton" id="btn_dashboard_members">
+												<property name="visible">True</property>
+												<property name="can_focus">True</property>
+												<property name="height_request">120</property>
+												<signal name="clicked" handler="on_dashboard_button_members_clicked" />
+												<child>
+													<object class="GtkVBox" id="vbox_member_mgmt">
+														<property name="visible">True</property>
+														<property name="spacing">10</property>
+														<child>
+															<object class="GtkLabel" id="label_member_mgmt_icon">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='30000'&gt;🏋️&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+															</object>
+														</child>
+														<child>
+															<object class="GtkLabel" id="label_member_mgmt_text">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Member Management&lt;/span&gt;
+&lt;span size='small'&gt;Manage gym members&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+																<property name="justify">GTK_JUSTIFY_CENTER</property>
+															</object>
+														</child>
+													</object>
+												</child>
+											</object>
+										</child>
+
+										<child>
+											<object class="GtkButton" id="btn_dashboard_member_stats">
+												<property name="visible">True</property>
+												<property name="can_focus">True</property>
+												<property name="height_request">120</property>
+												<signal name="clicked" handler="on_dashboard_button_member_stats_clicked" />
+												<child>
+													<object class="GtkVBox" id="vbox_member_stats">
+														<property name="visible">True</property>
+														<property name="spacing">10</property>
+														<child>
+															<object class="GtkLabel" id="label_member_stats_icon">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='30000'&gt;📊&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+															</object>
+														</child>
+														<child>
+															<object class="GtkLabel" id="label_member_stats_text">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Member Statistics&lt;/span&gt;
+&lt;span size='small'&gt;View member analytics&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+																<property name="justify">GTK_JUSTIFY_CENTER</property>
+															</object>
+														</child>
+													</object>
+												</child>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+							<packing>
+								<property name="expand">True</property>
+								<property name="fill">True</property>
+							</packing>
+						</child>
+
+						<!-- Coach Management Section -->
+						<child>
+							<object class="GtkFrame" id="frame_coach_section">
+								<property name="visible">True</property>
+								<property name="label_xalign">0.5</property>
+								<property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+								<child type="label">
+									<object class="GtkLabel" id="label_frame_coaches">
+										<property name="visible">True</property>
+										<property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;👨‍🏫 COACH MANAGEMENT&lt;/span&gt;</property>
+										<property name="use_markup">True</property>
+									</object>
+								</child>
+								<child>
+									<object class="GtkHBox" id="hbox_coach_buttons">
+										<property name="visible">True</property>
+										<property name="spacing">20</property>
+										<property name="border_width">20</property>
+										<property name="homogeneous">True</property>
+
+										<child>
+											<object class="GtkButton" id="btn_dashboard_coach">
+												<property name="visible">True</property>
+												<property name="can_focus">True</property>
+												<property name="height_request">120</property>
+												<signal name="clicked" handler="on_dashboard_button_coach_clicked" />
+												<child>
+													<object class="GtkVBox" id="vbox_coach_mgmt">
+														<property name="visible">True</property>
+														<property name="spacing">10</property>
+														<child>
+															<object class="GtkLabel" id="label_coach_mgmt_icon">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='30000'&gt;🎓&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+															</object>
+														</child>
+														<child>
+															<object class="GtkLabel" id="label_coach_mgmt_text">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Coach Management&lt;/span&gt;
+&lt;span size='small'&gt;Manage gym coaches&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+																<property name="justify">GTK_JUSTIFY_CENTER</property>
+															</object>
+														</child>
+													</object>
+												</child>
+											</object>
+										</child>
+
+										<child>
+											<object class="GtkButton" id="btn_dashboard_coach_stats">
+												<property name="visible">True</property>
+												<property name="can_focus">True</property>
+												<property name="height_request">120</property>
+												<signal name="clicked" handler="on_dashboard_button_coach_stats_clicked" />
+												<child>
+													<object class="GtkVBox" id="vbox_coach_stats">
+														<property name="visible">True</property>
+														<property name="spacing">10</property>
+														<child>
+															<object class="GtkLabel" id="label_coach_stats_icon">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='30000'&gt;📈&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+															</object>
+														</child>
+														<child>
+															<object class="GtkLabel" id="label_coach_stats_text">
+																<property name="visible">True</property>
+																<property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Coach Statistics&lt;/span&gt;
+&lt;span size='small'&gt;View coach analytics&lt;/span&gt;</property>
+																<property name="use_markup">True</property>
+																<property name="justify">GTK_JUSTIFY_CENTER</property>
+															</object>
+														</child>
+													</object>
+												</child>
+											</object>
+										</child>
+									</object>
+								</child>
+							</object>
+							<packing>
+								<property name="expand">True</property>
+								<property name="fill">True</property>
+							</packing>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">True</property>
+						<property name="fill">True</property>
+					</packing>
+				</child>
+
+				<!-- Footer Section -->
+				<child>
+					<object class="GtkEventBox" id="dashboard_footer_box">
+						<property name="visible">True</property>
+						<child>
+							<object class="GtkLabel" id="dashboard_footer_text">
+								<property name="visible">True</property>
+								<property name="label" translatable="yes">&lt;span size='small'&gt;© 2025 Gym Management System - Professional Edition&lt;/span&gt;</property>
+								<property name="use_markup">True</property>
+								<property name="xalign">0.5</property>
+								<property name="ypad">10</property>
+							</object>
+						</child>
+					</object>
+					<packing>
+						<property name="expand">False</property>
+						<property name="fill">True</property>
+					</packing>
+				</child>
+			</object>
+		</child>
+	</object>
+
+<object class="GtkWindow" id="window_coach">
+  <property name="visible">False</property>
+  <property name="title" translatable="yes">Coach Management</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER</property>
+  <property name="modal">False</property>
+  <property name="resizable">True</property>
+  <property name="decorated">True</property>
+  <signal name="destroy" handler="on_window_coach_destroy"/>
+  <signal name="show" handler="on_window_coach_show"/>
+
+
+  <child>
+    <object class="GtkFixed" id="fixed17">
+      <property name="visible">True</property>
+
+      <!-- Labels -->
+      <child>
+        <object class="GtkLabel" id="ID">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">ID</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">32</property>
+          <property name="y">24</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="First name">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">First name</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">32</property>
+          <property name="y">65</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="Last name">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">Last name</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">32</property>
+          <property name="y">104</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="label98">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">Gender</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">32</property>
+          <property name="y">144</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="label99">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">Age</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">32</property>
+          <property name="y">176</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="label100">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">Speciality</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">24</property>
+          <property name="y">224</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="label101">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">Phone</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">40</property>
+          <property name="y">256</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="label102">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">E-mail</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">40</property>
+          <property name="y">288</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkLabel" id="label103">
+          <property name="visible">True</property>
+          <property name="label" translatable="yes">Disponibility</property>
+          <property name="xalign">0.5</property>
+        </object>
+        <packing>
+          <property name="x">16</property>
+          <property name="y">320</property>
+        </packing>
+      </child>
+
+      <!-- Entry Fields -->
+      <child>
+        <object class="GtkEntry" id="entry_id">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="width_request">248</property>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">24</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkEntry" id="entry_first_name">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="width_request">248</property>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">56</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkEntry" id="entry_last_name">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="width_request">248</property>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">88</property>
+        </packing>
+      </child>
+
+      <!-- Gender Radio Buttons -->
+      <child>
+        <object class="GtkRadioButton" id="radio_male">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">male</property>
+          <property name="draw_indicator">True</property>
+          <signal name="toggled" handler="on_radio_male_toggled"/>
+        </object>
+        <packing>
+          <property name="x">128</property>
+          <property name="y">144</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkRadioButton" id="radio_female">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">female</property>
+          <property name="draw_indicator">True</property>
+          <property name="group">radio_male</property>
+          <signal name="toggled" handler="on_radio_female_toggled"/>
+        </object>
+        <packing>
+          <property name="x">280</property>
+          <property name="y">144</property>
+        </packing>
+      </child>
+
+      <!-- Age Spin Button -->
+      <child>
+        <object class="GtkSpinButton" id="spin_age">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="width_request">60</property>
+          <property name="adjustment">adjustment_age</property>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">176</property>
+        </packing>
+      </child>
+
+      <!-- Speciality Combo -->
+      <child>
+        <object class="GtkComboBox" id="combo_specialite">
+          <property name="visible">True</property>
+          <property name="width_request">261</property>
+          <property name="model">liststore_speciality</property>
+          <signal name="changed" handler="on_combo_specialite_changed"/>
+          <child>
+            <object class="GtkCellRendererText" id="renderer_specialite"/>
+            <attributes>
+              <attribute name="text">0</attribute>
+            </attributes>
+          </child>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">208</property>
+        </packing>
+      </child>
+
+      <!-- Phone Entry -->
+      <child>
+        <object class="GtkEntry" id="entry_phone">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="width_request">256</property>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">248</property>
+        </packing>
+      </child>
+
+      <!-- Email Entry -->
+      <child>
+        <object class="GtkEntry" id="entry_email">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="width_request">256</property>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">280</property>
+        </packing>
+      </child>
+
+      <!-- Disponibility Entry -->
+      <child>
+        <object class="GtkEntry" id="entry_dispo">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="width_request">256</property>
+        </object>
+        <packing>
+          <property name="x">136</property>
+          <property name="y">312</property>
+        </packing>
+      </child>
+
+      <!-- Message TextView -->
+      <child>
+        <object class="GtkLabel" id="label_message">
+          <property name="visible">True</property>
+          <property name="width_request">400</property>
+          <property name="height_request">56</property>
+          <property name="label"></property>
+          <property name="xalign">0</property>
+          <property name="yalign">0</property>
+          <property name="wrap">True</property>
+        </object>
+        <packing>
+          <property name="x">104</property>
+          <property name="y">416</property>
+        </packing>
+      </child>
+
+      <!-- Buttons -->
+      <child>
+        <object class="GtkButton" id="button_add">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">Add</property>
+          <property name="width_request">74</property>
+          <property name="height_request">29</property>
+          <signal name="clicked" handler="on_button_add_clicked"/>
+        </object>
+        <packing>
+          <property name="x">104</property>
+          <property name="y">480</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkButton" id="button_edit">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">Edit</property>
+          <property name="width_request">74</property>
+          <property name="height_request">29</property>
+          <signal name="clicked" handler="on_button_edit_clicked"/>
+        </object>
+        <packing>
+          <property name="x">192</property>
+          <property name="y">480</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkButton" id="button_delete">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">Delete</property>
+          <property name="width_request">74</property>
+          <property name="height_request">29</property>
+          <signal name="clicked" handler="on_button_delete_clicked"/>
+        </object>
+        <packing>
+          <property name="x">288</property>
+          <property name="y">480</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkButton" id="button_search">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">Search</property>
+          <property name="width_request">74</property>
+          <property name="height_request">29</property>
+          <signal name="clicked" handler="on_button_search_clicked"/>
+        </object>
+        <packing>
+          <property name="x">376</property>
+          <property name="y">480</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkButton" id="button_display">
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="label" translatable="yes">Display</property>
+          <property name="width_request">74</property>
+          <property name="height_request">29</property>
+          <signal name="clicked" handler="on_button_display_clicked"/>
+        </object>
+        <packing>
+          <property name="x">464</property>
+          <property name="y">480</property>
+        </packing>
+      </child>
+    </object>
+  </child>
+</object>
+
+
+
+
+<object class="GtkWindow" id="window_stats">
+  <property name="visible">False</property>
+  <property name="title" translatable="yes">Coach stats</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER</property>
+  <property name="modal">False</property>
+  <property name="resizable">True</property>
+  <property name="decorated">True</property>
+
+  <child>
+    <object class="GtkFixed" id="fixed18">
+      <property name="visible">True</property>
+
+      <child>
+        <object class="GtkTextView" id="label_nb_coachs">
+          <property name="width_request">168</property>
+          <property name="height_request">48</property>
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="editable">True</property>
+        </object>
+        <packing>
+          <property name="x">64</property>
+          <property name="y">128</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkTextView" id="textview17">
+          <property name="width_request">144</property>
+          <property name="height_request">48</property>
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="editable">True</property>
+        </object>
+        <packing>
+          <property name="x">248</property>
+          <property name="y">128</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkTextView" id="label_nb_moyen">
+          <property name="width_request">168</property>
+          <property name="height_request">56</property>
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="editable">True</property>
+        </object>
+        <packing>
+          <property name="x">64</property>
+          <property name="y">200</property>
+        </packing>
+      </child>
+
+      <child>
+        <object class="GtkTextView" id="textview19">
+          <property name="width_request">144</property>
+          <property name="height_request">56</property>
+          <property name="visible">True</property>
+          <property name="can_focus">True</property>
+          <property name="editable">True</property>
+        </object>
+        <packing>
+          <property name="x">248</property>
+          <property name="y">200</property>
+        </packing>
+      </child>
+    </object>
+  </child>
+</object>
+
+<object class="GtkWindow" id="Member Management">
+  <property name="visible">False</property>
+  <property name="title" translatable="yes">🏋️ Member Management System</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER</property>
+  <property name="default_width">1000</property>
+  <property name="default_height">750</property>
+  <property name="resizable">True</property>
+  <property name="decorated">True</property>
+  <signal name="show" handler="on_Member_Management_show" />
+
+  <child>
+    <object class="GtkVBox" id="vbox_main">
+      <property name="visible">True</property>
+      <property name="spacing">0</property>
+
+      <!-- Header Section -->
+      <child>
+        <object class="GtkEventBox" id="header_box">
+          <property name="visible">True</property>
+          <child>
+            <object class="GtkLabel" id="header_title">
+              <property name="visible">True</property>
+              <property name="label" translatable="yes">&lt;span size='x-large' weight='bold'&gt;MEMBER MANAGEMENT&lt;/span&gt;</property>
+              <property name="use_markup">True</property>
+              <property name="xalign">0.5</property>
+              <property name="ypad">15</property>
+            </object>
+          </child>
+        </object>
+        <packing>
+          <property name="expand">False</property>
+          <property name="fill">True</property>
+          <property name="padding">0</property>
+        </packing>
+      </child>
+
+      <!-- Main Content Area -->
+      <child>
+        <object class="GtkHBox" id="hbox_content">
+          <property name="visible">True</property>
+          <property name="spacing">20</property>
+          <property name="border_width">20</property>
+
+          <!-- Left Column - Personal Information -->
+          <child>
+            <object class="GtkVBox" id="vbox_left">
+              <property name="visible">True</property>
+              <property name="spacing">15</property>
+
+              <!-- Member ID Section -->
+              <child>
+                <object class="GtkFrame" id="frame_id">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_id">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Member Identification&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkVBox" id="vbox_id_content">
+                      <property name="visible">True</property>
+                      <property name="border_width">10</property>
+                      <property name="spacing">8</property>
+                      
+                      <child>
+                        <object class="GtkLabel" id="label_id_hint">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Member ID:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                      
+                      <child>
+                        <object class="GtkEntry" id="entryIdMember">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="width_chars">20</property>
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+
+              <!-- Personal Info Section -->
+              <child>
+                <object class="GtkFrame" id="frame_personal">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_personal">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Personal Information&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkTable" id="table_personal">
+                      <property name="visible">True</property>
+                      <property name="n_rows">4</property>
+                      <property name="n_columns">2</property>
+                      <property name="border_width">10</property>
+                      <property name="row_spacing">10</property>
+                      <property name="column_spacing">10</property>
+
+                      <!-- First Name -->
+                      <child>
+                        <object class="GtkLabel" id="label77">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">First Name:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="top_attach">0</property>
+                          <property name="bottom_attach">1</property>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkEntry" id="entryFNM">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="width_chars">25</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                          <property name="top_attach">0</property>
+                          <property name="bottom_attach">1</property>
+                        </packing>
+                      </child>
+
+                      <!-- Last Name -->
+                      <child>
+                        <object class="GtkLabel" id="label78">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Last Name:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="top_attach">1</property>
+                          <property name="bottom_attach">2</property>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkEntry" id="entryLNM">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="width_chars">25</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                          <property name="top_attach">1</property>
+                          <property name="bottom_attach">2</property>
+                        </packing>
+                      </child>
+
+                      <!-- Age -->
+                      <child>
+                        <object class="GtkLabel" id="label79">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Age:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="top_attach">2</property>
+                          <property name="bottom_attach">3</property>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkSpinButton" id="spinAge">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="adjustment">adjustment_age</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                          <property name="top_attach">2</property>
+                          <property name="bottom_attach">3</property>
+                        </packing>
+                      </child>
+
+                      <!-- Gender -->
+                      <child>
+                        <object class="GtkLabel" id="label80">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Gender:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="top_attach">3</property>
+                          <property name="bottom_attach">4</property>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkHBox" id="hbox_gender">
+                          <property name="visible">True</property>
+                          <property name="spacing">10</property>
+                          <child>
+                            <object class="GtkRadioButton" id="radioMale">
+                              <property name="visible">True</property>
+                              <property name="can_focus">True</property>
+                              <property name="label" translatable="yes">Male</property>
+                              <property name="draw_indicator">True</property>
+                              <signal name="toggled" handler="on_radioMale_toggled" />
+                            </object>
+                          </child>
+                          <child>
+                            <object class="GtkRadioButton" id="radioFemale">
+                              <property name="visible">True</property>
+                              <property name="can_focus">True</property>
+                              <property name="label" translatable="yes">Female</property>
+                              <property name="draw_indicator">True</property>
+                              <property name="group">radioMale</property>
+                              <signal name="toggled" handler="on_radioFemale_toggled" />
+                            </object>
+                          </child>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                          <property name="top_attach">3</property>
+                          <property name="bottom_attach">4</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+
+              <!-- Contact Info Section -->
+              <child>
+                <object class="GtkFrame" id="frame_contact">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_contact">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Contact Information&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkTable" id="table_contact">
+                      <property name="visible">True</property>
+                      <property name="n_rows">2</property>
+                      <property name="n_columns">2</property>
+                      <property name="border_width">10</property>
+                      <property name="row_spacing">10</property>
+                      <property name="column_spacing">10</property>
+
+                      <child>
+                        <object class="GtkLabel" id="label81">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Phone:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkEntry" id="entryPhone">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="width_chars">25</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkLabel" id="label82">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Email:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="top_attach">1</property>
+                          <property name="bottom_attach">2</property>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkEntry" id="entryEmail">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="width_chars">25</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                          <property name="top_attach">1</property>
+                          <property name="bottom_attach">2</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+
+              <!-- Membership Section -->
+              <child>
+                <object class="GtkFrame" id="frame_membership">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label83">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Membership Details&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkVBox" id="vbox_membership">
+                      <property name="visible">True</property>
+                      <property name="border_width">10</property>
+                      <property name="spacing">8</property>
+                      
+                      <child>
+                        <object class="GtkLabel" id="label_sub_type">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Subscription Type:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                      
+                      <child>
+                        <object class="GtkComboBoxEntry" id="comboSub">
+                          <property name="visible">True</property>
+                          <property name="add_tearoffs">False</property>
+                          <signal name="changed" handler="on_comboSub_changed" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+            </object>
+            <packing>
+              <property name="expand">True</property>
+              <property name="fill">True</property>
+            </packing>
+          </child>
+
+          <!-- Right Column - Actions -->
+          <child>
+            <object class="GtkVBox" id="vbox_right">
+              <property name="visible">True</property>
+              <property name="spacing">15</property>
+
+              <!-- CRUD Operations -->
+              <child>
+                <object class="GtkFrame" id="frame_crud">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_crud">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Record Management&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkVBox" id="vbox_crud">
+                      <property name="visible">True</property>
+                      <property name="border_width">15</property>
+                      <property name="spacing">10</property>
+
+                      <child>
+                        <object class="GtkButton" id="buttonAdd">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">➕ Add New Member</property>
+                          <property name="height_request">40</property>
+                          <signal name="clicked" handler="on_buttonAdd_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkButton" id="buttonSearch">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">🔍 Search Member</property>
+                          <property name="height_request">40</property>
+                          <signal name="clicked" handler="on_buttonSearch_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkButton" id="buttonEdit">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">✏️ Update Member</property>
+                          <property name="height_request">40</property>
+                          <signal name="clicked" handler="on_buttonEdit_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkButton" id="buttonDelete">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">🗑️ Delete Member</property>
+                          <property name="height_request">40</property>
+                          <signal name="clicked" handler="on_buttonDelete_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+
+              <!-- Member Services -->
+              <child>
+                <object class="GtkFrame" id="frame_services">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_services">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Member Services&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkVBox" id="vbox_services">
+                      <property name="visible">True</property>
+                      <property name="border_width">15</property>
+                      <property name="spacing">10</property>
+
+                      <child>
+                        <object class="GtkButton" id="buttonPCR">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">👤 Private Coach Request</property>
+                          <property name="height_request">40</property>
+                          <signal name="clicked" handler="on_buttonPCR_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkButton" id="buttonJC">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">📚 Join Course</property>
+                          <property name="height_request">40</property>
+                          <signal name="clicked" handler="on_buttonJC_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkButton" id="ButtonStats">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">📊 Show Statistics</property>
+                          <property name="height_request">40</property>
+                          <signal name="clicked" handler="on_ButtonStats_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+            </object>
+            <packing>
+              <property name="expand">True</property>
+              <property name="fill">True</property>
+            </packing>
+          </child>
+        </object>
+        <packing>
+          <property name="expand">True</property>
+          <property name="fill">True</property>
+        </packing>
+      </child>
+    </object>
+  </child>
+</object>
+
+
+
+
+
+
+
+
+
+
+
+<object class="GtkWindow" id="Member Statistics">
+  <property name="visible">False</property>
+  <property name="title" translatable="yes">📊 Member Statistics System</property>
+  <property name="type">GTK_WINDOW_TOPLEVEL</property>
+  <property name="window_position">GTK_WIN_POS_CENTER</property>
+  <property name="default_width">1000</property>
+  <property name="default_height">750</property>
+  <property name="resizable">True</property>
+  <property name="decorated">True</property>
+  <signal name="show" handler="on_Member_Statistics_show" />
+
+  <child>
+    <object class="GtkVBox" id="vbox_stats_main">
+      <property name="visible">True</property>
+      <property name="spacing">0</property>
+
+      <!-- Header -->
+      <child>
+        <object class="GtkEventBox" id="stats_header_box">
+          <property name="visible">True</property>
+          <child>
+            <object class="GtkLabel" id="stats_header_title">
+              <property name="visible">True</property>
+              <property name="label" translatable="yes">&lt;span size='x-large' weight='bold'&gt;MEMBER STATISTICS&lt;/span&gt;</property>
+              <property name="use_markup">True</property>
+              <property name="xalign">0.5</property>
+              <property name="ypad">15</property>
+            </object>
+          </child>
+        </object>
+        <packing>
+          <property name="expand">False</property>
+          <property name="fill">True</property>
+        </packing>
+      </child>
+
+      <!-- Main Content -->
+      <child>
+        <object class="GtkHBox" id="hbox_stats_content">
+          <property name="visible">True</property>
+          <property name="spacing">20</property>
+          <property name="border_width">20</property>
+
+          <!-- Left Column - Statistics Data -->
+          <child>
+            <object class="GtkVBox" id="vbox_stats_left">
+              <property name="visible">True</property>
+              <property name="spacing">15</property>
+
+              <!-- Activity Statistics -->
+              <child>
+                <object class="GtkFrame" id="frame_activity">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_activity">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Activity Statistics&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkTable" id="table_activity">
+                      <property name="visible">True</property>
+                      <property name="n_rows">2</property>
+                      <property name="n_columns">2</property>
+                      <property name="border_width">10</property>
+                      <property name="row_spacing">10</property>
+                      <property name="column_spacing">10</property>
+
+                      <child>
+                        <object class="GtkLabel" id="label_numclasses">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Classes Attended:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkTextView" id="textviewNumClasses">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="height_request">40</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkLabel" id="label_favclass">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Favorite Class:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="top_attach">1</property>
+                          <property name="bottom_attach">2</property>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkTextView" id="textviewFavClass">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="height_request">40</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                          <property name="top_attach">1</property>
+                          <property name="bottom_attach">2</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+
+              <!-- Coach Evaluation -->
+              <child>
+                <object class="GtkFrame" id="frame_coach_eval">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_coach">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Coach Evaluation&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkVBox" id="vbox_coach_eval">
+                      <property name="visible">True</property>
+                      <property name="border_width">10</property>
+                      <property name="spacing">10</property>
+
+                      <child>
+                        <object class="GtkLabel" id="label_coach_name">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Coach Name:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkComboBoxEntry" id="comboCoachName">
+                          <property name="visible">True</property>
+                          <property name="add_tearoffs">False</property>
+                          <signal name="changed" handler="on_comboCoachName_changed" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkLabel" id="label_performance">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Performance Ranking:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+
+                      <child>
+                        <object class="GtkHBox" id="hbox_ranking">
+                          <property name="visible">True</property>
+                          <property name="spacing">10</property>
+                          <child>
+                            <object class="GtkRadioButton" id="radiobtnBad">
+                              <property name="visible">True</property>
+                              <property name="can_focus">True</property>
+                              <property name="label" translatable="yes">Bad</property>
+                              <property name="draw_indicator">True</property>
+                              <signal name="toggled" handler="on_radiobtnBad_toggled" />
+                            </object>
+                          </child>
+                          <child>
+                            <object class="GtkRadioButton" id="radiobtnGood">
+                              <property name="visible">True</property>
+                              <property name="can_focus">True</property>
+                              <property name="label" translatable="yes">Good</property>
+                              <property name="draw_indicator">True</property>
+                              <property name="group">radiobtnBad</property>
+                              <signal name="toggled" handler="on_radiobtnGood_toggled" />
+                            </object>
+                          </child>
+                          <child>
+                            <object class="GtkRadioButton" id="radiobtnExcellent">
+                              <property name="visible">True</property>
+                              <property name="can_focus">True</property>
+                              <property name="label" translatable="yes">Excellent</property>
+                              <property name="draw_indicator">True</property>
+                              <property name="group">radiobtnBad</property>
+                              <signal name="toggled" handler="on_radiobtnExcellent_toggled" />
+                            </object>
+                          </child>
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+
+              <!-- Performance Metrics -->
+              <child>
+                <object class="GtkFrame" id="frame_performance">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_performance">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Performance Metrics&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkTable" id="table_performance">
+                      <property name="visible">True</property>
+                      <property name="n_rows">1</property>
+                      <property name="n_columns">2</property>
+                      <property name="border_width">10</property>
+                      <property name="row_spacing">10</property>
+                      <property name="column_spacing">10</property>
+
+                      <child>
+                        <object class="GtkLabel" id="label_consistency">
+                          <property name="visible">True</property>
+                          <property name="label" translatable="yes">Consistency Score:</property>
+                          <property name="xalign">0</property>
+                        </object>
+                        <packing>
+                          <property name="x_options">GTK_FILL</property>
+                        </packing>
+                      </child>
+                      <child>
+                        <object class="GtkTextView" id="textviewConsistency">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="height_request">40</property>
+                        </object>
+                        <packing>
+                          <property name="left_attach">1</property>
+                          <property name="right_attach">2</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+            </object>
+            <packing>
+              <property name="expand">True</property>
+              <property name="fill">True</property>
+            </packing>
+          </child>
+
+          <!-- Right Column - Actions -->
+          <child>
+            <object class="GtkVBox" id="vbox_stats_right">
+              <property name="visible">True</property>
+              <property name="spacing">15</property>
+
+              <child>
+                <object class="GtkFrame" id="frame_stats_actions">
+                  <property name="visible">True</property>
+                  <property name="label_xalign">0.05</property>
+                  <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                  <child type="label">
+                    <object class="GtkLabel" id="label_frame_stats_actions">
+                      <property name="visible">True</property>
+                      <property name="label" translatable="yes">&lt;b&gt;Actions&lt;/b&gt;</property>
+                      <property name="use_markup">True</property>
+                    </object>
+                  </child>
+                  <child>
+                    <object class="GtkVBox" id="vbox_stats_actions">
+                      <property name="visible">True</property>
+                      <property name="border_width">15</property>
+                      <property name="spacing">10</property>
+
+                      <child>
+                        <object class="GtkButton" id="buttonStatsSave">
+                          <property name="visible">True</property>
+                          <property name="can_focus">True</property>
+                          <property name="label" translatable="yes">💾 Save Statistics</property>
+                          <property name="height_request">50</property>
+                          <signal name="clicked" handler="on_buttonStatsSave_clicked" />
+                        </object>
+                        <packing>
+                          <property name="expand">False</property>
+                        </packing>
+                      </child>
+                    </object>
+                  </child>
+                </object>
+                <packing>
+                  <property name="expand">False</property>
+                  <property name="fill">True</property>
+                </packing>
+              </child>
+            </object>
+            <packing>
+              <property name="expand">True</property>
+              <property name="fill">True</property>
+            </packing>
+          </child>
+        </object>
+        <packing>
+          <property name="expand">True</property>
+          <property name="fill">True</property>
+        </packing>
+      </child>
+    </object>
+  </child>
+</object>
+
+</interface>

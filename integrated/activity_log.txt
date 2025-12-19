@@ -1,0 +1,4 @@
+[EVENT] Private coach request for member: 123456789
+[EVENT] Member 123456789 joined a course
+[EVENT] Private coach request for member: 10838880
+[EVENT] Member 10838880 joined a course

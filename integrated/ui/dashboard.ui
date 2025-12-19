@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+
+  <object class="GtkWindow" id="Dashboard">
+    <property name="visible">False</property>
+    <property name="title" translatable="yes">🏋️ Gym Management System - Dashboard</property>
+    <property name="type">GTK_WINDOW_TOPLEVEL</property>
+    <property name="window_position">GTK_WIN_POS_CENTER</property>
+    <property name="default_width">1200</property>
+    <property name="default_height">800</property>
+    <property name="resizable">True</property>
+    <property name="decorated">True</property>
+    <signal name="destroy" handler="on_Dashboard_destroy" />
+
+    <child>
+      <object class="GtkVBox" id="vbox_dashboard_main">
+        <property name="visible">True</property>
+        <property name="spacing">0</property>
+
+        <!-- Header Section -->
+        <child>
+          <object class="GtkEventBox" id="dashboard_header_box">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkVBox" id="vbox_header_content">
+                <property name="visible">True</property>
+                <property name="spacing">5</property>
+                <property name="border_width">20</property>
+
+                <child>
+                  <object class="GtkLabel" id="dashboard_header_title">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">&lt;span size='xx-large' weight='bold'&gt;🏋️ GYM MANAGEMENT SYSTEM&lt;/span&gt;</property>
+                    <property name="use_markup">True</property>
+                    <property name="xalign">0.5</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+
+                <child>
+                  <object class="GtkLabel" id="dashboard_subtitle">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">&lt;span size='large'&gt;Professional Management Dashboard&lt;/span&gt;</property>
+                    <property name="use_markup">True</property>
+                    <property name="xalign">0.5</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+          </packing>
+        </child>
+
+        <!-- Main Dashboard Content -->
+        <child>
+          <object class="GtkVBox" id="vbox_dashboard_content">
+            <property name="visible">True</property>
+            <property name="spacing">20</property>
+            <property name="border_width">30</property>
+
+            <!-- Member Management Section -->
+            <child>
+              <object class="GtkFrame" id="frame_member_section">
+                <property name="visible">True</property>
+                <property name="label_xalign">0.5</property>
+                <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                <child type="label">
+                  <object class="GtkLabel" id="label_frame_members">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;👥 MEMBER MANAGEMENT&lt;/span&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox_member_buttons">
+                    <property name="visible">True</property>
+                    <property name="spacing">20</property>
+                    <property name="border_width">20</property>
+                    <property name="homogeneous">True</property>
+
+                    <child>
+                      <object class="GtkButton" id="btn_member_management">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="height_request">120</property>
+                        <signal name="clicked" handler="on_btn_member_management_clicked" />
+                        <child>
+                          <object class="GtkVBox" id="vbox_member_mgmt">
+                            <property name="visible">True</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkLabel" id="label_member_mgmt_icon">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='30000'&gt;🏋️&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="label_member_mgmt_text">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Member Management&lt;/span&gt;
+&lt;span size='small'&gt;Manage gym members&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="justify">GTK_JUSTIFY_CENTER</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkButton" id="btn_member_statistics">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="height_request">120</property>
+                        <signal name="clicked" handler="on_btn_member_statistics_clicked" />
+                        <child>
+                          <object class="GtkVBox" id="vbox_member_stats">
+                            <property name="visible">True</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkLabel" id="label_member_stats_icon">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='30000'&gt;📊&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="label_member_stats_text">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Member Statistics&lt;/span&gt;
+&lt;span size='small'&gt;View member analytics&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="justify">GTK_JUSTIFY_CENTER</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+              </packing>
+            </child>
+
+            <!-- Coach Management Section -->
+            <child>
+              <object class="GtkFrame" id="frame_coach_section">
+                <property name="visible">True</property>
+                <property name="label_xalign">0.5</property>
+                <property name="shadow_type">GTK_SHADOW_ETCHED_IN</property>
+                <child type="label">
+                  <object class="GtkLabel" id="label_frame_coaches">
+                    <property name="visible">True</property>
+                    <property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;👨‍🏫 COACH MANAGEMENT&lt;/span&gt;</property>
+                    <property name="use_markup">True</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkHBox" id="hbox_coach_buttons">
+                    <property name="visible">True</property>
+                    <property name="spacing">20</property>
+                    <property name="border_width">20</property>
+                    <property name="homogeneous">True</property>
+
+                    <child>
+                      <object class="GtkButton" id="btn_coach_management">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="height_request">120</property>
+                        <signal name="clicked" handler="on_btn_coach_management_clicked" />
+                        <child>
+                          <object class="GtkVBox" id="vbox_coach_mgmt">
+                            <property name="visible">True</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkLabel" id="label_coach_mgmt_icon">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='30000'&gt;🎓&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="label_coach_mgmt_text">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Coach Management&lt;/span&gt;
+&lt;span size='small'&gt;Manage gym coaches&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="justify">GTK_JUSTIFY_CENTER</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+
+                    <child>
+                      <object class="GtkButton" id="btn_coach_statistics">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="height_request">120</property>
+                        <signal name="clicked" handler="on_btn_coach_statistics_clicked" />
+                        <child>
+                          <object class="GtkVBox" id="vbox_coach_stats">
+                            <property name="visible">True</property>
+                            <property name="spacing">10</property>
+                            <child>
+                              <object class="GtkLabel" id="label_coach_stats_icon">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='30000'&gt;📈&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="label_coach_stats_text">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">&lt;span size='large' weight='bold'&gt;Coach Statistics&lt;/span&gt;
+&lt;span size='small'&gt;View coach analytics&lt;/span&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="justify">GTK_JUSTIFY_CENTER</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+          </packing>
+        </child>
+
+        <!-- Footer Section -->
+        <child>
+          <object class="GtkEventBox" id="dashboard_footer_box">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkLabel" id="dashboard_footer_text">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">&lt;span size='small'&gt;© 2025 Gym Management System - Professional Edition&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+                <property name="xalign">0.5</property>
+                <property name="ypad">10</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

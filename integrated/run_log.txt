@@ -1,0 +1,26 @@
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.863: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.865: Unknown property: GtkComboBoxEntry.items
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.866: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.866: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.866: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.866: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.867: Unknown property: GtkComboBoxEntry.items
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.867: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.867: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.868: Unknown property: GtkTextView.text
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.868: Unknown property: GtkComboBoxEntry.items
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.868: No object called: 18 18 80 1 10 10
+
+(integrated_app:103408): Gtk-WARNING **: 01:10:56.868: No object called: 18 0 100 1 10 10
