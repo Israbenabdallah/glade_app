@@ -1,0 +1,19 @@
+M002|Bob|Johnson|31|1|987654321|bob@newmail.com|Platinum|1|1|1
+
+125352|Isra|Ben Abdallah|20|0|55654958|esra@esra.com|Annual|0|0|0
+[EVENT] Member Ex:12561456 requested stats display
+[EVENT] Member Ex:12561456 joined a course
+[EVENT] Private coach request for member: Ex:12561456
+[EVENT] Member Ex:12561456 requested stats display
+1058282|Isra|Ben Abdallah|23|0|55555555|isra@gmail.com|Monthly |0|0|0
+[EVENT] Member Ex:12561456 joined a course
+5868652|Emna|Mhamdi|22|0|Ex:99256485|Ex:Esprit@esprit.tn|Monthly |0|0|0
+5555|isra|bbb|18|0|55555|gngfo,nhkgf@|Monthly |0|0|0
+[EVENT] Private coach request for member: 5555
+[EVENT] Member 5555 joined a course
+[EVENT] Private coach request for member: Ex:12561456
+[EVENT] Private coach request for member: M002
+[EVENT] Member M002 joined a course
+[EVENT] Private coach request for member: Ex:12561456
+[EVENT] Member Ex:12561456 joined a course
+[EVENT] Private coach request for member: 45455

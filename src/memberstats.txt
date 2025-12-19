@@ -1,0 +1,13 @@
+M001|12|Yoga|Coach Emma|2|8
+M002|5|Weight Loss|Coach John|3|7
+M003|8|Pilates|Coach Emma|1|6
+M004|15|Crossfit|Coach Mike|3|9
+M005|7|Zumba|Coach Anna|2|7
+M006|10|Boxing|Coach John|2|8
+M007|3|Yoga|Coach Emma|1|5
+M008|9|Weight Loss|Coach Anna|3|6
+M009|14|Pilates|Coach Mike|2|9
+M010|6|Crossfit|Coach John|1|6
+M011|11|Zumba|Coach Emma|3|8
+M012|4|Boxing|Coach Mike|2|5
+
